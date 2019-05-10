@@ -1,0 +1,14 @@
+<div class="navbar bg-light d-flex">
+  <h2>Wikinimous</h2>
+  <%= link_to "New Article", new_article_path %>
+</div>
+<div class="container">
+<% @articles.each do |article| %>
+  <%= link_to article_path(article) do %>
+    <h2><%= article.title %></h1>
+  <% end %>
+  <p><%= article.content %></p>
+<% end %>
+</div>
+
+
